@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ int
+ bool
+ float
+ double
+ char
+ string
  
  
  
@@ -59,10 +59,32 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int myAge = 30;
+    int myHeight = 73;
+    int luckyNumber = 7;
+
+    bool codeIsCorrect = true;
+    bool thisIsFun = true;
+    bool iKnowWhatIAmDoing = false;
+
+    float bottleSize = 8.0f;
+    float ringAmount = 2.0f;
+    float childAge = 7.5f;
+
+    double price = 29.99;
+    double weight = 14.33;
+    double timePassed = 17.39;
+
+    char initial = 'D';
+    char floor = 'A';
+    char apartment = 'F';
+
+    std::string myName = "Elam";
+    std::string firstProgram = "Hello World!";
+    std::string gratitude = "Thanks Chuck!";
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myAge, myHeight, luckyNumber, codeIsCorrect, thisIsFun, iKnowWhatIAmDoing, bottleSize, ringAmount, childAge, price, weight, timePassed, initial, floor, apartment, myName, firstProgram, gratitude); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +101,81 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+float getSize(int height, int width, int length = 3)
+{
+    ignoreUnused(height, width, length);
+    return {};
+}
 /*
  2)
  */
-
+int driveToWork(int loadGpsRoute, bool checkGasLevel, float chooseRadioStation = 94.3f)
+{
+    ignoreUnused(loadGpsRoute, checkGasLevel, chooseRadioStation);
+    return {};
+}
 /*
  3)
  */
-
+bool checkCodeKnowledge(bool checkCodeErrors, bool checkCodeStyle = true)
+{
+    ignoreUnused(checkCodeErrors, checkCodeStyle);
+    return {};
+}
 /*
  4)
  */
-
+int makeCoffee(int grindBeans, int checkSize, bool checkHeat = true, int heatWater = 212)
+{
+    ignoreUnused(grindBeans, checkSize, checkHeat, heatWater);
+    return {};
+}
 /*
  5)
  */
-
+void readBook(int openToLastPage, float getSpeed = 2.5f, bool textToSpeech = true)
+{
+    ignoreUnused(openToLastPage, getSpeed, textToSpeech);
+}
 /*
  6)
  */
-
+std::string greetUser(double getTimeAndDate, std::string getUserName, bool checkFirstTimeUser = false)
+{
+    ignoreUnused(getTimeAndDate, getUserName, checkFirstTimeUser);
+    return {};
+} 
 /*
  7)
  */
-
+int makeScrambledEggs(int setHeat, int getEggAmount = 4, int getCookingLevel = 3)
+{
+    ignoreUnused(setHeat, getEggAmount, getCookingLevel);
+    return {};
+}
 /*
  8)
  */
-
+void morningRoutine(double getStartTime = 7.5, int openShades = 75, bool startCoffeeMaker = true, int heatShowerWater = 80)
+{
+    ignoreUnused(getStartTime, openShades, startCoffeeMaker, heatShowerWater);
+}
 /*
  9)
  */
-
+double calculateAverage(int getNumberA, int getNumberB, int getNumberC, int getNumberD = 75)
+{
+    ignoreUnused(getNumberA, getNumberB, getNumberC, getNumberD);
+    return{};
+}
 /*
  10)
  */
-
+char calculateGrade(bool checkForErrors, int countMarkups = 5, int lookupGradePrimer = 100)
+{
+    ignoreUnused(checkForErrors, countMarkups, lookupGradePrimer);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +196,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto roomSize = getSize(7, 10, 5);
     //2)
-    
+    auto getToWork = driveToWork(5, true, 103.1f);
     //3)
-    
+    auto studentEvaluation = checkCodeKnowledge(false, true);
     //4)
-    
+    auto coffeeIsReady = makeCoffee(50, 4, true, 212);
     //5)
-    
+    readBook(34, 2.0f, false);
     //6)
-    
+    auto userInterfaceStart = greetUser(100012172021, "MatKatMusic", true);
     //7)
-    
+    auto eatBreakfast = makeScrambledEggs(250, 3, 3);
     //8)
-    
+    morningRoutine(0645, 80, true, 78);
     //9)
-    
+    auto getAverage = calculateAverage(5, 47, 1002, 75);
     //10)
+    auto studentGrade = calculateGrade(false, 6, 150);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, roomSize, getToWork, studentEvaluation, coffeeIsReady, readBook, userInterfaceStart, eatBreakfast, morningRoutine, getAverage, studentGrade);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }

@@ -125,31 +125,57 @@ bool checkCodeKnowledge(bool checkCodeErrors, bool checkCodeStyle = true)
 /*
  4)
  */
-
+int makeCoffee(int grindBeans, int checkSize, bool checkHeat = true, int heatWater = 212)
+{
+    ignoreUnused(grindBeans, checkSize, checkHeat, heatWater);
+    return {};
+}
 /*
  5)
  */
-
+void readBook(int openToLastPage, float getSpeed = 2.5f, bool textToSpeech = true)
+{
+    ignoreUnused(openToLastPage, getSpeed, textToSpeech);
+}
 /*
  6)
  */
-
+string greetUser(double getTimeAndDate, string getUserName, bool checkFirstTimeUser = false)
+{
+    ignoreUnused(getTimeAndDate, getUserName, checkFirstTimeUser);
+    return {};
+} 
 /*
  7)
  */
-
+int makeScrambledEggs(int setHeat, int getEggAmount = 4, int getCookingLevel = 3)
+{
+    ignoreUnused(setHeat, getEggAmount, getCookingLevel);
+    return {};
+}
 /*
  8)
  */
-
+void morningRoutine(double getStartTime = 7.5, int openShades = 75, bool startCoffeeMaker = true, int heatShowerWater = 80)
+{
+    ignoreUnused(getStartTime, openShades, startCoffeeMaker, heatShowerWater);
+}
 /*
  9)
  */
-
+double calculateAverage(int getNumberA, int getNumberB, int getNumberC, int getNumberD = 75)
+{
+    ignoreUnused(getNumberA, getNumberB, getNumberC, getNumberD);
+    return{};
+}
 /*
  10)
  */
-
+char calculateGrade(bool checkForErrors, int countMarkups = 5, int lookupGradePrimer = 100)
+{
+    ignoreUnused(checkForErrors, countMarkups, lookupGradePrimer);
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -170,27 +196,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto roomSize = getSize(7, 10, 5);
     //2)
-    
+    auto getToWork = driveToWork(5, true, 103.1f);
     //3)
-    
+    auto studentEvaluation = checkCodeKnowledge(false, true);
     //4)
-    
+    auto coffeeIsReady = makeCoffee(50, 4, true, 212);
     //5)
-    
+    relaxWithBook = readBook(34, 2.0f, false);
     //6)
-    
+    auto userInterfaceStart = greetUser(100012172021, "MatKatMusic", true);
     //7)
-    
+    auto eatBreakfast = makeScrambledEggs(250, 3, 3);
     //8)
-    
+    wakeUp = morningRoutine(0645, 80, true, 78);
     //9)
-    
+    auto getAverage = calculateAverage(5, 47, 1002, 75);
     //10)
+    auto studentGrade = calculateGrade(false, 6, 150);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, roomSize, getToWork, studentEvaluation, coffeeIsReady, relaxWithBook, userInterfaceStart, eatBreakfast, wakeUp, getAverage, studentGrade);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }

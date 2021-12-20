@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
+ int
+ bool
+ float
+ double
+ char
+ string
  
  
  
@@ -59,10 +59,32 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int myAge = 30;
+    int myHeight = 73;
+    int luckyNumber = 7;
+
+    bool codeIsCorrect = true;
+    bool thisIsFun = true;
+    bool iKnowWhatIAmDoing = false;
+
+    float bottleSize = 8.0f;
+    float ringAmount = 2.0f;
+    float childAge = 7.5f;
+
+    double price = 29.99;
+    double weight = 14.33;
+    double timePassed = 17.39;
+
+    char initial = 'D';
+    char floor = 'A';
+    char apartment = 'F';
+
+    string myName = "Elam";
+    string firstProgram = "Hello World!";
+    string gratitude = "Thanks Chuck!";
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, myAge, myHeight, luckyNumber, codeIsCorrect, thisIsFun, iKnowWhatIAmDoing, bottleSize, ringAmount, childAge, price, weight, timePassed, initial, floor, apartment, myName, firstProgram, gratitude); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,15 +101,27 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+float getSize(int height, int width, int length = 3)
+{
+    ignoreUnused(height, width, length);
+    return {};
+}
 /*
  2)
  */
-
+int driveToWork(int loadGpsRoute, bool checkGasLevel, float chooseRadioStation = 94.3f)
+{
+    ignoreUnused(loadGpsRoute, checkGasLevel, chooseRadioStation);
+    return {};
+}
 /*
  3)
  */
-
+bool checkCodeKnowledge(bool checkCodeErrors, bool checkCodeStyle = true)
+{
+    ignoreUnused(checkCodeErrors, checkCodeStyle);
+    return {};
+}
 /*
  4)
  */

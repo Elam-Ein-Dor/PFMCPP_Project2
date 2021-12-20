@@ -79,9 +79,9 @@ void variableDeclarations()
     char floor = 'A';
     char apartment = 'F';
 
-    string myName = "Elam";
-    string firstProgram = "Hello World!";
-    string gratitude = "Thanks Chuck!";
+    std::string myName = "Elam";
+    std::string firstProgram = "Hello World!";
+    std::string gratitude = "Thanks Chuck!";
 
     
     ignoreUnused(number, myAge, myHeight, luckyNumber, codeIsCorrect, thisIsFun, iKnowWhatIAmDoing, bottleSize, ringAmount, childAge, price, weight, timePassed, initial, floor, apartment, myName, firstProgram, gratitude); //passing each variable declared to the ignoreUnused() function
@@ -140,7 +140,7 @@ void readBook(int openToLastPage, float getSpeed = 2.5f, bool textToSpeech = tru
 /*
  6)
  */
-string greetUser(double getTimeAndDate, string getUserName, bool checkFirstTimeUser = false)
+std::string greetUser(double getTimeAndDate, std::string getUserName, bool checkFirstTimeUser = false)
 {
     ignoreUnused(getTimeAndDate, getUserName, checkFirstTimeUser);
     return {};
@@ -204,19 +204,19 @@ int main()
     //4)
     auto coffeeIsReady = makeCoffee(50, 4, true, 212);
     //5)
-    relaxWithBook = readBook(34, 2.0f, false);
+    readBook(34, 2.0f, false);
     //6)
     auto userInterfaceStart = greetUser(100012172021, "MatKatMusic", true);
     //7)
     auto eatBreakfast = makeScrambledEggs(250, 3, 3);
     //8)
-    wakeUp = morningRoutine(0645, 80, true, 78);
+    morningRoutine(0645, 80, true, 78);
     //9)
     auto getAverage = calculateAverage(5, 47, 1002, 75);
     //10)
     auto studentGrade = calculateGrade(false, 6, 150);
     
-    ignoreUnused(carRented, roomSize, getToWork, studentEvaluation, coffeeIsReady, relaxWithBook, userInterfaceStart, eatBreakfast, wakeUp, getAverage, studentGrade);
+    ignoreUnused(carRented, roomSize, getToWork, studentEvaluation, coffeeIsReady, readBook, userInterfaceStart, eatBreakfast, morningRoutine, getAverage, studentGrade);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
